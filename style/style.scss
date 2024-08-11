@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Inter", sans-serif;
+}
+
+body, html {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.payment {
+    & .container {
+        display: flex;
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: -30%;
+            top: 0;
+            height: 100%;
+            width: 30%;
+            background: #f7f7f7;
+            z-index: 1;
+        }
+    }
+}
+.container {
+    width: 1300px;
+    margin: 0 auto;
+}
+.payment-form {
+    padding-top: 14px ;
+    padding-right: 30px;
+    position: relative;
+    z-index: 2;
+}
+.payment-form-heading {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 91%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 55px;
+}
+.payment-form-inputs {
+    width: 660px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 30px;
+
+}
+.payment-form__input {
+    border: 1px solid #a2a2a2;
+    border-radius: 2px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: #000;
+}
+.payment-card {
+    background: #f7f7f7;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    padding-top: 14px;
+}
+.payment-card-heading {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 91%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 48px;
+}
+.payment-top {
+    display: flex;
+    margin-bottom: 16px;
+}
+.payment-top-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 111%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #000;
+}
+.payment-card-items {
+    width: 100%;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 18px 0;
+}
+.payment-card-item {
+    display: flex;
+    align-items: center;
+}
+.payment-card-item__delete {
+    width: 9px;
+    height: 9px;
+    margin-right: 13px; 
+
+}
+.payment-card-item__img {
+    width: 65px;
+    height: 65px;
+    margin-right: 13px;
+}
+.payment-card-item__texts {
+    margin-right: 50px;
+}
+.payment-card-item__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: #000;
+}
+.payment-card-item__num {
+    display: flex;
+    align-items: center;
+}
+.payment-card-item__num__minus {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: #000;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px 0 0 4px;
+    width: 25px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.payment-card-item__num__current {
+    border: 1px solid #e5e5e5;
+    width: 33px;
+    height: 32px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    background: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+}
+.payment-card-item__num__pluss {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: #000;
+    border: 1px solid #e5e5e5;
+    border-radius: 0 4px 4px 0;
+    width: 25px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.payment-card-item__price {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: -0.03em;
+    color: #6a6a6a;
+}
+.payment-card-vid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px 9px;
+}
+.payment-vid__item {
+    background: #fff;
+    border: 1px solid #c7c7c7;
+    border-radius: 4px;
+    padding: 5px 0px;
+    padding: 11px 10px;
+    height: 100%;
+    &.active {
+        border: 1px solid #2a2a2a;
+        border-radius: 4px;
+        padding: 5px 0px;
+        width: 278px;
+        height: 72px;
+        background: #f7f7f7;
+    }
+}
+.payment-vid__item__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+.payment-vid__item__top__img {
+    max-height: 29px;
+}
+.payment-vid__item__top__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: -0.03em;
+    color: #646464;
+    text-align: center;
+}
+.payment-vid__item__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+.payment-vid__item__price__price {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: #000;
+}
+.payment-vid__item__price__srok {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: #6a6a6a;
+}
+.payment-card-input {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e4e4e4;
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.payment-card-input__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 167%;
+    letter-spacing: -0.03em;
+    color: #000;
+}
+.payment-card-input__inp {
+    border: 1px solid #a2a2a2;
+    border-radius: 2px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: #000;
+    width: 100%;
+    background: none;
+}
+.payment-card-itogo {
+    border-radius: 0 0 10px 10px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px 27px 24px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.payment-card-itogo__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 111%;
+    letter-spacing: -0.02em;
+    color: #000;
+}
+.payment-card-itogo__price {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 77%;
+    letter-spacing: -0.02em;
+    color: #000;
+}
+.payment-card-vid-oplaty {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+.payment-card-vid-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+.payment-card-vid-label__inp {
+    width: 15px;
+    height: 15px;
+}
+.payment-card-vid-label__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: #000;
+}
+.payment-card-vid-oplaty-desk {
+    margin-top: 21px;
+    border-radius: 10px;
+    width: 100%;
+    background: #fff;
+    position: relative;
+    padding: 16px 13px;
+}
+.payment-card-vid-oplaty-desk_svg {
+    position: absolute;
+    top: -6px;
+    left: 23px;
+    width: 12px;
+    height: 6px;
+}
+.payment-card-vid-oplaty-desk_text {
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: #7b7b7b;
+}
+.payment-polityc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #e4e4e4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.payment-polityc-label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+.payment-polityc-label__checbox {
+    width: 13px;
+    height: 13px;
+}
+.payment-polityc-label__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: #000;
+    & a {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: -0.03em;
+        color: #000;
+    }
+}
+.payment-card-button {
+    width: 100%;
+    margin-bottom: 90px;
+}
+.payment-card-button-submit {
+    border-radius: 2px;
+    padding: 10px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fff;
+    background: #4f4f4f;
+}

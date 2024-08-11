@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
+</head>
+
+<body>
+
+    <section class="payment">
+        <div class="container">
+            <div class="payment-form">
+                <p class="payment-form-heading">Оплата и доставка</p>
+                <div class="payment-form-inputs">
+                    <input type="text" class="payment-form__input" placeholder="Имя">
+                    <input type="text" class="payment-form__input" placeholder="Фамилия">
+                    <input type="text" class="payment-form__input" placeholder="Телефон">
+                    <input type="text" class="payment-form__input" placeholder="Email">
+                </div>
+            </div>
+            <div class="payment-card">
+                <p class="payment-card-heading">Ваш заказ</p>
+                <div class="payment-top">
+                    <p class="payment-top-text">Товар</p>
+                    <p class="payment-top-text">Сумма</p>
+                </div>
+                <div class="payment-card-items">
+                    <div class="payment-card-item">
+                        <svg class="payment-card-item__delete" viewBox="0 0 9 9" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L8.5 8.5" stroke="black" stroke-linecap="round" />
+                            <path d="M8.5 1L1 8.5" stroke="black" stroke-linecap="round" />
+                        </svg>
+                        <img src="./media/tovar.png" alt="card item img" class="payment-card-item__img">
+                        <div class="payment-card-item__texts">
+                            <p class="payment-card-item__title">Bleu Riviera туалетная вода 600 мл</p>
+                            <div class="payment-card-item__num">
+                                <div class="payment-card-item__num__minus">-</div>
+                                <input type="number" value="1" class="payment-card-item__num__current">
+                                <div class="payment-card-item__num__pluss">+</div>
+                            </div>
+                        </div>
+                        <p class="payment-card-item__price">20 000 ₽</p>
+                    </div>
+                </div>
+                <div class="payment-card-vid">
+                    <div class="payment-vid__item active">
+                        <div class="payment-vid__item__top">
+                            <img src="./media/sdek.png" alt="" class="payment-vid__item__top__img">
+                            <p class="payment-vid__item__top__text">Посылка склад-склад</p>
+                        </div>
+                        <div class="payment-vid__item__price">
+                            <p class="payment-vid__item__price__price">196 рублей </p>
+                            <p class="payment-vid__item__price__srok">2 дня</p>
+                        </div>
+                    </div>
+                    <div class="payment-vid__item">
+                        <div class="payment-vid__item__top">
+                            <img src="./media/sdek.png" alt="" class="payment-vid__item__top__img">
+                            <p class="payment-vid__item__top__text">Посылка склад-дверь</p>
+                        </div>
+                        <div class="payment-vid__item__price">
+                            <p class="payment-vid__item__price__price">196 рублей </p>
+                            <p class="payment-vid__item__price__srok">2 дня</p>
+                        </div>
+                    </div>
+                    <div class="payment-vid__item">
+                        <div class="payment-vid__item__top">
+                            <p class="payment-vid__item__top__text">Курьером по Москве и в пределах МКАД</p>
+                        </div>
+                        <div class="payment-vid__item__price">
+                            <p class="payment-vid__item__price__price">196 рублей </p>
+                            <p class="payment-vid__item__price__srok">2 дня</p>
+                        </div>
+                    </div>
+                    <div class="payment-vid__item pochta">
+                        <div class="payment-vid__item__top">
+                            <img src="./media/pochta.png" alt="" class="payment-vid__item__top__img">
+                            <p class="payment-vid__item__top__text">Рассчитывает менеджер</p>
+                        </div>
+                    </div>
+                    <div class="payment-vid__item">Самовывоз</div>
+
+                </div>
+                <div class="payment-card-input">
+                    <p class="payment-card-input__text">Введите адрес доставки или пункта выдачи</p>
+                    <input type="text" class="payment-card-input__inp" placeholder="Город, улица, дом, квартира">
+                </div>
+                <div class="payment-card-itogo">
+                    <p class="payment-card-itogo__text">Итого</p>
+                    <p class="payment-card-itogo__price">40 196 Р</p>
+                </div>
+                <div class="payment-card-vid-oplaty">
+                    <label class="payment-card-vid-label">
+                        <input type="radio" class="payment-card-vid-label__inp">
+                        <p class="payment-card-vid-label__text">Наложенным платежом. Оплата при получении, после осмотра
+                            заказа</p>
+                    </label>
+                    <label class="payment-card-vid-label">
+                        <input type="radio" class="payment-card-vid-label__inp">
+                        <p class="payment-card-vid-label__text">Наложенным платежом. Оплата при получении, после осмотра
+                            заказа</p>
+                    </label>
+                    <div class="payment-card-vid-oplaty-desk">
+                        <svg class="payment-card-vid-oplaty-desk_svg" viewBox="0 0 12 6" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 0L11.1962 6H0.803848L6 0Z" fill="white" />
+                        </svg>
+                        <div class="payment-card-vid-oplaty-desk_text">Онлайн через шлюз банка</div>
+                    </div>
+                </div>
+                <div class="payment-polityc">
+                    <label  class="payment-polityc-label">
+                        <input type="checkbox" class="payment-polityc-label__checbox">
+                        <p class="payment-polityc-label__text">Я прочитал(а) и принимаю <a href=""> правила и условия </a> сайта</p>
+                    </label>
+                </div>
+                <div class="payment-card-button">
+                    <button class="payment-card-button-submit">Подтвердить заказ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
